@@ -94,8 +94,25 @@ Functions</h2></td></tr>
 <tr class="separator:a4fb6b407e85fee49ec8a65db4aded68e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">This module contains the main PYFT class
-PYFT is the file level class (read/write...)
+<div class="textblock"><pre class="fragment">This module contains the main PYFT class.
+
+PYFT (Python FORTRAN Tool) is the primary class for reading, manipulating,
+and writing FORTRAN source files. It provides file-level operations and
+wraps the scope-level functionality from PYFTscope.
+
+Examples
+--------
+&gt;&gt;&gt; from pyfortool import PYFT
+
+# Read and modify a file
+&gt;&gt;&gt; pft = PYFT('input.F90')
+&gt;&gt;&gt; pft.removePrints()
+&gt;&gt;&gt; pft.write()
+
+# Use context manager
+&gt;&gt;&gt; with PYFT('input.F90') as pft:
+...     pft.removeComments()
+...     pft.write()
 </pre> </div><h2 class="groupheader">Function Documentation</h2>
 <a id="acbe5a929c8a87ec2c2de7ccfa9e54b4e" name="acbe5a929c8a87ec2c2de7ccfa9e54b4e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acbe5a929c8a87ec2c2de7ccfa9e54b4e">&#9670;&#160;</a></span>conservativePYFT()</h2>
@@ -146,29 +163,52 @@ PYFT is the file level class (read/write...)
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Return a conservative PYFT object usable for tree manipulation
-:param filename: name of the file to open
-:param parserOptions, wrapH: see the PYFT class
-:param tree: Tree instance or None
-:param verbosity: if not None, sets the verbosity level
-:param clsPYFT: PYFT class to use
-:return: PYFT object
+<pre class="fragment">Create a PYFT object with conservative parsing options.
+
+Similar to PYFT constructor but forces the '-no-include' option
+to prevent automatic inclusion of header files.
+
+Parameters
+----------
+filename : str
+    Path to the FORTRAN source file.
+parserOptions : list or None
+    Parser options passed to PYFT. If None, uses default options.
+wrapH : bool
+    Whether to wrap .h file content. See PYFT class.
+tree : Tree, optional
+    Tree instance for cross-file analysis.
+verbosity : str or int, optional
+    Logging verbosity level.
+clsPYFT : type, optional
+    PYFT subclass to use instead of default PYFT.
+
+Returns
+-------
+PYFT
+    A PYFT instance configured for conservative tree manipulation.
+
+See Also
+--------
+PYFT : The main PYFT class.
 </pre> 
-<p class="definition">Definition at line <a class="el" href="pyfortool_8py_source.html#l00019">19</a> of file <a class="el" href="pyfortool_8py_source.html">pyfortool.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pyfortool_8py_source.html#l00036">36</a> of file <a class="el" href="pyfortool_8py_source.html">pyfortool.py</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacepyfortool_1_1pyfortool_acbe5a929c8a87ec2c2de7ccfa9e54b4e_icgraph.png" border="0" usemap="#anamespacepyfortool_1_1pyfortool_acbe5a929c8a87ec2c2de7ccfa9e54b4e_icgraph" alt=""/></div>
 <map name="anamespacepyfortool_1_1pyfortool_acbe5a929c8a87ec2c2de7ccfa9e54b4e_icgraph" id="anamespacepyfortool_1_1pyfortool_acbe5a929c8a87ec2c2de7ccfa9e54b4e_icgraph">
-<area shape="rect" title=" " alt="" coords="724,73,987,98"/>
-<area shape="rect" href="classpyfortool_1_1tree_1_1Tree.html#a429892e9b0cead0831a06c32e79a4a73" title=" " alt="" coords="484,33,631,73"/>
-<area shape="poly" title=" " alt="" coords="723,74,631,64,631,59,724,69"/>
-<area shape="rect" href="classpyfortool_1_1variables_1_1Variables.html#a5622ce7e21d966f6d800e3f9b0459a2f" title=" " alt="" coords="439,97,676,137"/>
-<area shape="poly" title=" " alt="" coords="723,102,676,107,676,102,723,97"/>
+<area shape="rect" title=" " alt="" coords="757,105,1020,130"/>
+<area shape="rect" href="classpyfortool_1_1tree_1_1Tree.html#a429892e9b0cead0831a06c32e79a4a73" title=" " alt="" coords="501,33,647,73"/>
+<area shape="poly" title=" " alt="" coords="811,104,647,71,648,66,812,99"/>
+<area shape="rect" href="classpyfortool_1_1variables_1_1Variables.html#a5622ce7e21d966f6d800e3f9b0459a2f" title=" " alt="" coords="455,97,693,137"/>
+<area shape="poly" title=" " alt="" coords="744,120,693,120,693,115,744,115"/>
+<area shape="rect" href="classpyfortool_1_1variables_1_1Variables.html#a60a8b120ed2d1c8517770a3ae8a2928c" title=" " alt="" coords="439,162,709,187"/>
+<area shape="poly" title=" " alt="" coords="805,135,645,165,644,159,804,130"/>
 <area shape="rect" href="classpyfortool_1_1tree_1_1Tree.html#a5ba131c4e2da8b46cc8dccb687aae7f0" title=" " alt="" coords="222,5,369,45"/>
-<area shape="poly" title=" " alt="" coords="470,47,369,36,369,30,471,41"/>
+<area shape="poly" title=" " alt="" coords="487,47,369,35,369,30,487,42"/>
 <area shape="rect" href="classpyfortool_1_1tree_1_1Tree.html#a7ae74c21dd8f7ea794dfa6df3d8cb5ef" title=" " alt="" coords="200,70,391,95"/>
-<area shape="poly" title=" " alt="" coords="471,66,391,75,391,69,470,60"/>
+<area shape="poly" title=" " alt="" coords="488,65,391,75,390,70,487,60"/>
 <area shape="rect" href="classpyfortool_1_1tree_1_1Tree.html#aa2c0f5c767205bcb74be574690542405" title=" " alt="" coords="5,5,152,45"/>
 <area shape="poly" title=" " alt="" coords="208,28,152,28,152,23,208,23"/>
 </map>
@@ -207,12 +247,30 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Generates an empty PYFT scope
-:param filename: file name corresponding to this new PYFT scope
-:param fortran: fortran text to include
-:param **kwargs: other arguments for the PYFT class
+<pre class="fragment">Generate a new PYFT object from a file path, creating the file if needed.
+
+Parameters
+----------
+filename : str
+    Path for the new file.
+fortran : str, optional
+    FORTRAN source code to write to the file.
+    If None, creates a stub subroutine "SUBROUTINE FOO\nEND".
+**kwargs
+    Additional arguments passed to PYFT constructor.
+
+Returns
+-------
+PYFT
+    PYFT instance for the newly created file.
+
+Examples
+--------
+&gt;&gt;&gt; pft = generateEmptyPYFT('new.F90', 'MODULE TEST\nEND MODULE')
+&gt;&gt;&gt; pft.addVar([('module:TEST', 'X', 'INTEGER :: X', None)])
+&gt;&gt;&gt; pft.write()
 </pre> 
-<p class="definition">Definition at line <a class="el" href="pyfortool_8py_source.html#l00042">42</a> of file <a class="el" href="pyfortool_8py_source.html">pyfortool.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pyfortool_8py_source.html#l00080">80</a> of file <a class="el" href="pyfortool_8py_source.html">pyfortool.py</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

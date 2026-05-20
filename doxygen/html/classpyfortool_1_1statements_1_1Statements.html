@@ -116,6 +116,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a23c9d25d27cb20d1c1c9fe8340b62aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8862eec599ba78ad8968d42e7ef4af3" id="r_ab8862eec599ba78ad8968d42e7ef4af3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpyfortool_1_1statements_1_1Statements.html#ab8862eec599ba78ad8968d42e7ef4af3">checkOpInCall</a> (self, mustRaise=False)</td></tr>
 <tr class="separator:ab8862eec599ba78ad8968d42e7ef4af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7055c2fee34f05895b5207767586e4e1" id="r_a7055c2fee34f05895b5207767586e4e1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpyfortool_1_1statements_1_1Statements.html#a7055c2fee34f05895b5207767586e4e1">checkEmptyParensInCall</a> (self, mustRaise=False)</td></tr>
+<tr class="separator:a7055c2fee34f05895b5207767586e4e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a776cb9f9c9ddcd5bd7939396068c02ab" id="r_a776cb9f9c9ddcd5bd7939396068c02ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpyfortool_1_1statements_1_1Statements.html#a776cb9f9c9ddcd5bd7939396068c02ab">insertStatement</a> (self, stmt, first)</td></tr>
 <tr class="separator:a776cb9f9c9ddcd5bd7939396068c02ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca8c108f96b084947a9e094e41cd31ad" id="r_aca8c108f96b084947a9e094e41cd31ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpyfortool_1_1statements_1_1Statements.html#aca8c108f96b084947a9e094e41cd31ad">removeStmtNode</a> (self, nodes, simplifyVar, simplifyStruct)</td></tr>
@@ -135,8 +137,72 @@ Static Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><pre class="fragment">Methods to act on statements
 </pre> 
-<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l00068">68</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l00091">91</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7055c2fee34f05895b5207767586e4e1" name="a7055c2fee34f05895b5207767586e4e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7055c2fee34f05895b5207767586e4e1">&#9670;&#160;</a></span>checkEmptyParensInCall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pyfortool.statements.Statements.checkEmptyParensInCall </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mustRaise</em> = <code>False</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">:param mustRaise: True to raise
+Issue a logging.warning if some call arguments are arrays with empty parens
+Example: CALL FOO(A(:))
+If mustRaise is True, issue a logging.error instead and raise an error
+</pre> 
+<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l01381">1381</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpyfortool_1_1statements_1_1Statements_a7055c2fee34f05895b5207767586e4e1_cgraph.png" border="0" usemap="#aclasspyfortool_1_1statements_1_1Statements_a7055c2fee34f05895b5207767586e4e1_cgraph" alt=""/></div>
+<map name="aclasspyfortool_1_1statements_1_1Statements_a7055c2fee34f05895b5207767586e4e1_cgraph" id="aclasspyfortool_1_1statements_1_1Statements_a7055c2fee34f05895b5207767586e4e1_cgraph">
+<area shape="rect" title=" " alt="" coords="5,108,285,148"/>
+<area shape="rect" href="classpyfortool_1_1scope_1_1ElementView.html#a16495974c6c803a6a3582bce4c738133" title=" " alt="" coords="600,189,856,214"/>
+<area shape="poly" title=" " alt="" coords="257,145,334,157,587,186,586,191,333,163,256,151"/>
+<area shape="rect" href="classpyfortool_1_1scope_1_1PYFTscope.html#a5ce15a70bc7948feff004ffcf1787584" title=" " alt="" coords="333,20,552,60"/>
+<area shape="poly" title=" " alt="" coords="212,105,333,69,359,61,361,66,334,74,214,110"/>
+<area shape="rect" href="classpyfortool_1_1scope_1_1PYFTscope.html#aaac539e9a11df3a3349dbc111417ab46" title=" " alt="" coords="333,108,552,148"/>
+<area shape="poly" title=" " alt="" coords="285,125,319,125,319,131,285,131"/>
+<area shape="poly" title=" " alt="" coords="683,190,673,180,678,170,697,164,728,162,769,166,780,171,783,178,779,180,776,175,768,171,728,167,698,169,681,174,678,179,686,187"/>
+<area shape="rect" href="classpyfortool_1_1scope_1_1ElementView.html#a7a1db7bc1c5100e0e9b813edf25d9239" title=" " alt="" coords="904,108,1120,148"/>
+<area shape="poly" title=" " alt="" coords="778,186,920,149,921,154,779,191"/>
+<area shape="rect" href="classpyfortool_1_1scope_1_1ElementView.html#a1dbaf54daab3dba3a8d608ab623ca736" title=" " alt="" coords="1168,115,1408,141"/>
+<area shape="poly" title=" " alt="" coords="1120,134,1154,134,1154,140,1120,139"/>
+<area shape="poly" title=" " alt="" coords="1168,122,1134,122,1134,116,1168,116"/>
+<area shape="poly" title=" " alt="" coords="1244,117,1234,107,1239,97,1257,91,1288,89,1327,93,1338,98,1342,104,1337,106,1335,102,1326,98,1288,94,1258,96,1243,101,1239,106,1248,113"/>
+<area shape="poly" title=" " alt="" coords="552,17,600,12,728,3,785,4,856,12,965,31,1071,57,1239,108,1237,113,1070,62,964,36,856,17,784,10,728,8,600,17,553,23"/>
+<area shape="rect" href="classpyfortool_1_1scope_1_1PYFTscope.html#afcd42c5faa043bd829b59f482116849f" title=" " alt="" coords="613,27,843,67"/>
+<area shape="poly" title=" " alt="" coords="552,40,599,41,599,46,552,45"/>
+<area shape="poly" title=" " alt="" coords="506,105,599,77,635,68,636,73,601,82,508,110"/>
+<area shape="poly" title=" " alt="" coords="390,108,387,98,395,89,414,83,443,81,476,84,494,91,492,96,474,89,443,87,415,89,398,93,392,99,395,107"/>
+<area shape="rect" href="classpyfortool_1_1scope_1_1ElementView.html#a094a527c283f07ffd1b2dc669ac2b219" title=" " alt="" coords="609,115,847,141"/>
+<area shape="poly" title=" " alt="" coords="552,125,595,125,595,131,552,131"/>
+<area shape="poly" title=" " alt="" coords="847,125,890,125,890,131,847,131"/>
+<area shape="poly" title=" " alt="" coords="683,117,673,107,678,97,697,91,728,89,769,93,780,98,783,104,779,107,776,102,768,98,728,94,698,96,681,101,678,106,686,113"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="ab8862eec599ba78ad8968d42e7ef4af3" name="ab8862eec599ba78ad8968d42e7ef4af3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab8862eec599ba78ad8968d42e7ef4af3">&#9670;&#160;</a></span>checkOpInCall()</h2>
 
@@ -166,7 +232,7 @@ Static Public Member Functions</h2></td></tr>
 Issue a logging.warning if some call arguments are operations
 If mustRaise is True, issue a logging.error instead and raise an error
 </pre> 
-<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l01173">1173</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l01364">1364</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -245,7 +311,7 @@ Here is the call graph for this function:</div>
           - extraindent the number of added indentation
             (2 if concurrent else 2*len(loopVariables))
 </pre> 
-<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l01418">1418</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l01647">1647</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -295,7 +361,7 @@ Here is the caller graph for this function:</div>
 :param simplify: try to simplify code (if if-block is removed, variables used in the
                  if condition are also checked)
 </pre> 
-<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l01151">1151</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l01342">1342</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -428,32 +494,40 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Inline a subContainted subroutine
-Steps :
-    - update the main code if needed (if statement and/or elemental)
-    - copy the subContained node
-    - remove everything before the declarations variables and the variables declarations
-    - deal with optional argument
-    - from the callStmt, replace all the arguments by their names
-    - inline in the main code
-    - add local variables and use statements to the main code
-:param subContained: xml fragment corresponding to the sub: to inline
-:param callStmt: the call-stmt to replace
-:param mainScope: scope of the main (calling) subroutine
-:param simplify: try to simplify code (construct or variables becoming useless)
-:param loopVar: None to create new variable for each added DO loop (around ELEMENTAL
-                    subroutine calls)
-                or a function that return the name of the variable to use for the
-                loop control.
-                This function returns a string (name of the variable), or True to create
-                a new variable, or False to not transform this statement
-                The functions takes as arguments:
-                  - lower and upper bounds as defined in the declaration statement
-                  - lower and upper bounds as given in the statement
-                  - name of the array
-                  - index of the rank
+<pre class="fragment">Inline a single contained subroutine at its call site.
+
+This method performs the actual inlining of a contained subroutine
+into the calling scope. It handles:
+- ELEMENTAL subroutines with array arguments
+- Optional arguments (PRESENT intrinsic)
+- Variable name conflicts
+- USE statement merging
+
+Parameters
+----------
+subContained : xml element
+    XML fragment corresponding to the contained subroutine scope.
+callStmt : xml element
+    The call-stmt node to replace with inlined code.
+mainScope : PYFTscope
+    Scope of the main (calling) subroutine.
+simplify : bool, optional
+    If True, remove empty constructs and unused variables
+    after inlining. Default is False.
+loopVar : callable or None, optional
+    Function to determine loop index variable name.
+    Used when inlining ELEMENTAL subroutines called on arrays.
+    Takes: (lowerDecl, upperDecl, lowerUsed, upperUsed, name, index)
+    Returns: str, True (auto-generate), or False (skip).
+
+Notes
+-----
+- For ELEMENTAL subroutines on arrays: DO loops are introduced.
+- Optional arguments: PRESENT(var) is replaced with .TRUE. or .FALSE.
+- Missing optional arguments: code paths using them are removed.
+- Name conflicts: local variables are renamed with _N suffixes.
 </pre> 
-<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l00662">662</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l00810">810</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -514,25 +588,39 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Inline all contained subroutines in the main subroutine
-Steps :
-    - Identify contained subroutines
-    - Look for all CALL statements, check if it is a containted routines; if yes, inline
-    - Delete the containted routines
-:param simplify: try to simplify code (construct or variables becoming useless)
-:param loopVar: None to create new variable for each added DO loop (around ELEMENTAL
-                    subroutine calls)
-                or a function that return the name of the variable to use for the
-                loop control.
-                This function returns a string (name of the variable), or True to create
-                a new variable, or False to not transform this statement
-                The functions takes as arguments:
-                  - lower and upper bounds as defined in the declaration statement
-                  - lower and upper bounds as given in the statement
-                  - name of the array
-                  - index of the rank
+<pre class="fragment">Inline all contained subroutines into their parent.
+
+Transforms contained subroutines (defined after CONTAINS) by:
+1. Identifying contained subroutines
+2. Finding all CALL statements to contained routines
+3. Inlining the routine body where called
+4. Removing the contained routine definitions
+
+Parameters
+----------
+simplify : bool, optional
+    If True, simplify code by removing empty constructs
+    and unused variables after inlining. Default is False.
+loopVar : callable or None, optional
+    Function to determine loop index variable name for ELEMENTAL
+    subroutine calls on arrays.
+    Takes: (lowerDecl, upperDecl, lowerUsed, upperUsed, name, index)
+    Returns: str, True (auto-generate), or False (skip).
+
+Examples
+--------
+&gt;&gt;&gt; pft = PYFT('input.F90')
+&gt;&gt;&gt; pft.inlineContainedSubroutines()
+&gt;&gt;&gt; pft.write()
+
+Notes
+-----
+- ELEMENTAL subroutines called on arrays get wrapped in DO loops.
+- Optional arguments are handled (PRESENT checks are added/removed).
+- Variables in contained routines may be renamed to avoid conflicts.
+- Empty CONTAINS sections are removed when simplify=True.
 </pre> 
-<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l00598">598</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l00732">732</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -644,7 +732,7 @@ Here is the caller graph for this function:</div>
 :param item: item to add to the list
 :param parent: the parent of item (the list)
 </pre> 
-<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l01523">1523</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l01752">1752</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -694,7 +782,7 @@ Here is the caller graph for this function:</div>
 :param first: True to insert it in first position, False to insert it in last position
 :return: the index of the stmt inserted in scope
 </pre> 
-<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l01190">1190</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l01402">1402</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -748,10 +836,25 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Return True if node (named-E) is an argument of a called procedure
-:param node: node to test
+<pre class="fragment">Check if a node is an argument of a CALL statement.
+
+Parameters
+----------
+node : xml element
+    A named-E element to check.
+
+Returns
+-------
+bool
+    True if the node is an argument in a CALL statement,
+    False otherwise.
+
+Examples
+--------
+&gt;&gt;&gt; node = pft.find('.//{*}named-E[{*}N/{*}n="X"]')
+&gt;&gt;&gt; is_arg = pft.isNodeInCall(node)  # True if X is in CALL FOO(X)
 </pre> 
-<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l00104">104</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l00142">142</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -779,9 +882,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpyfortool_1_1statements_1_1Statements_ac4f0397dc915a86820bbb76bf66e4b2c_icgraph.png" border="0" usemap="#aclasspyfortool_1_1statements_1_1Statements_ac4f0397dc915a86820bbb76bf66e4b2c_icgraph" alt=""/></div>
 <map name="aclasspyfortool_1_1statements_1_1Statements_ac4f0397dc915a86820bbb76bf66e4b2c_icgraph" id="aclasspyfortool_1_1statements_1_1Statements_ac4f0397dc915a86820bbb76bf66e4b2c_icgraph">
-<area shape="rect" title=" " alt="" coords="291,5,544,45"/>
-<area shape="rect" href="classpyfortool_1_1variables_1_1Variables.html#aade5a6f7b776a5530297aaab8789b165" title=" " alt="" coords="5,5,243,45"/>
-<area shape="poly" title=" " alt="" coords="277,28,243,28,243,23,277,23"/>
+<area shape="rect" title=" " alt="" coords="316,37,569,77"/>
+<area shape="rect" href="classpyfortool_1_1variables_1_1Variables.html#aade5a6f7b776a5530297aaab8789b165" title=" " alt="" coords="18,5,255,45"/>
+<area shape="poly" title=" " alt="" coords="302,45,255,40,256,35,302,40"/>
+<area shape="rect" href="classpyfortool_1_1variables_1_1Variables.html#aaf11ba3948b5f5a40fbb9fa7a47466ed" title=" " alt="" coords="5,69,268,109"/>
+<area shape="poly" title=" " alt="" coords="303,75,269,78,268,73,302,69"/>
 </map>
 </div>
 
@@ -818,11 +923,26 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Return True if node (named-E) is an argument of a procedure listed in procList
-:param node: node to test
-:param procList: list of procedure names
+<pre class="fragment">Check if a node is an argument of a specific intrinsic procedure.
+
+Parameters
+----------
+node : xml element
+    A named-E element to check.
+procList : list of str
+    List of intrinsic procedure names (e.g., ['ALLOCATED', 'PRESENT']).
+
+Returns
+-------
+bool
+    True if the node is an argument of one of the specified procedures.
+
+Examples
+--------
+&gt;&gt;&gt; node = pft.find('.//{*}named-E')
+&gt;&gt;&gt; is_arg = pft.isNodeInProcedure(node, ['ALLOCATED', 'PRESENT'])
 </pre> 
-<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l00074">74</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l00097">97</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -857,9 +977,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpyfortool_1_1statements_1_1Statements_a52b5eeb79fcf388b71065593a715f7a6_icgraph.png" border="0" usemap="#aclasspyfortool_1_1statements_1_1Statements_a52b5eeb79fcf388b71065593a715f7a6_icgraph" alt=""/></div>
 <map name="aclasspyfortool_1_1statements_1_1Statements_a52b5eeb79fcf388b71065593a715f7a6_icgraph" id="aclasspyfortool_1_1statements_1_1Statements_a52b5eeb79fcf388b71065593a715f7a6_icgraph">
-<area shape="rect" title=" " alt="" coords="291,5,544,45"/>
-<area shape="rect" href="classpyfortool_1_1variables_1_1Variables.html#aade5a6f7b776a5530297aaab8789b165" title=" " alt="" coords="5,5,243,45"/>
-<area shape="poly" title=" " alt="" coords="277,28,243,28,243,23,277,23"/>
+<area shape="rect" title=" " alt="" coords="316,37,569,77"/>
+<area shape="rect" href="classpyfortool_1_1variables_1_1Variables.html#aade5a6f7b776a5530297aaab8789b165" title=" " alt="" coords="18,5,255,45"/>
+<area shape="poly" title=" " alt="" coords="302,45,255,40,256,35,302,40"/>
+<area shape="rect" href="classpyfortool_1_1variables_1_1Variables.html#aaf11ba3948b5f5a40fbb9fa7a47466ed" title=" " alt="" coords="5,69,268,109"/>
+<area shape="poly" title=" " alt="" coords="303,75,269,78,268,73,302,69"/>
 </map>
 </div>
 
@@ -938,45 +1060,87 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Transform array syntax into DO loops
-:param concurrent: use 'DO CONCURRENT' instead of simple 'DO' loops
-:param useMnhExpand: use the mnh directives to transform the entire bloc in a single loop
-:param everywhere: transform all array syntax in DO loops
-:param loopVar: None to create new variable for each added DO loop, or
-                a function that return the name of the variable to use for the loop control.
-                This function returns a string (name of the variable), or True to create
-                a new variable, or False to not transform this statement
-                The functions takes as arguments:
-                  - lower and upper bounds as defined in the declaration statement
-                  - lower and upper bounds as given in the statement
-                  - name of the array
-                  - index of the rank
-:param reuseLoop: if True, try to reuse loop created whith everywhere=True
-:param funcList: list of entity names that must be recognized as array functions
-                 (in addition to the intrisic ones) to discard from transformation
-                 statements that make use of them. None is equivalent to an empty list.
-:param updateMemSet: True to put affectation to constante in DO loops
-:param updateCopy: True to put array copy in DO loops
-:param addAccIndependentCollapse: True to add !$acc loop independent collapse(X) before
-                                  the DO construct
+<pre class="fragment">Transform array syntax assignments into explicit DO loops.
 
-Notes: * With useMnhExpand, the function checks if the coding is conform to what is needed
-         for the filepp/mnh_expand tool (to not breack compatibility with this tool)
-       * Arrays are transformed only if ':' are used.
-         A=A(:) is not transformed at all (or raises an exception if found in a WHERE block)
-         A(:)=A is wrongly transformed into "DO...; A(J1)=A; ENDDO" and will produce a
-             compilation error
-         WHERE(L) X(:)=0. is not transformed at all (unknown behaviour in case
-             of nested WHERE)
-       * This function is not compatible with functions that return arrays:
-         X(1:5)=FUNC(1) will be transformed into "DO J1=1,5; X(J1)=FUNC(1); ENDDO"
-         x(1:5)=FUNC(X(1:5)) will be transformed into "DO J1=1,5; X(J1)=FUNC(X(J1)); ENDDO"
-         But intrinsic functions (COUNT, ANY...) are recognised and corresponding statements
-         are not transformed.
-         The list of intrinsic array functions can be extended by user functions with the
-         funcList argument.
+Converts Fortran array syntax (e.g., A(:) = B(:)) into equivalent DO loop form.
+
+Parameters
+----------
+concurrent : bool, optional
+    If True, use 'DO CONCURRENT' loops instead of simple 'DO' loops.
+    Default is False.
+useMnhExpand : bool, optional
+    If True, respect mnh_expand directives to transform entire blocks
+    into a single loop. Default is True.
+everywhere : bool, optional
+    If True, transform all array syntax in the code.
+    If False, only transform sections marked with !$mnh_expand directives.
+    Default is True.
+loopVar : callable or None, optional
+    Function to determine loop index variable name.
+    Takes arguments: (lowerDecl, upperDecl, lowerUsed, upperUsed, name, index)
+    Returns: str (variable name), True (auto-generate name), or False (skip).
+    None (default) auto-generates variable names (J1, J2, etc.).
+reuseLoop : bool, optional
+    If True, attempt to reuse loops when consecutive statements
+    have identical bounds. Default is True.
+funcList : list of str, optional
+    Additional function names to recognize as array functions.
+    These functions will not be expanded. Default is None (empty list).
+updateMemSet : bool, optional
+    If True, transform constant array initializations (e.g., A(:) = 0)
+    into DO loops. Default is False.
+updateCopy : bool, optional
+    If True, transform array copy operations (e.g., A(:) = B(:))
+    into DO loops. Default is False.
+addAccIndependentCollapse : bool, optional
+    If True, add !$acc loop independent collapse(N) directive
+    before DO constructs. Default is True.
+
+Returns
+-------
+None
+
+Transformation Examples
+----------------------
+Simple assignment:
+
+Before:
+    A(:) = B(:) + C(:)
+
+After (standard):
+    DO J1 = LBOUND(A, 1), UBOUND(A, 1)
+        A(J1) = B(J1) + C(J1)
+    END DO
+
+After (concurrent):
+    DO CONCURRENT (J1=LBOUND(A, 1):UBOUND(A, 1))
+        A(J1) = B(J1) + C(J1)
+    END DO
+
+WHERE construct:
+
+Before:
+    WHERE (MASK(:)) X(:) = Y(:)
+
+After:
+    DO J1 = 1, SIZE(X, 1)
+        IF (MASK(J1)) X(J1) = Y(J1)
+    END DO
+
+Notes
+-----
+- Only transforms array syntax using explicit ':' notation.
+- Intrinsic array functions (COUNT, ANY, SUM, etc.) are preserved.
+- Does not transform:
+  - A=A(:) (no-op on left side)
+  - A(:)=A (single array without slice on right side)
+- When useMnhExpand=True, requires specific directive format:
+  !$mnh_expand_array(INDEX=bounds)
+  ... code to transform ...
+  !$mnh_end_expand_array(INDEX=bounds)
 </pre> 
-<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l00153">153</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l00244">244</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1022,11 +1186,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpyfortool_1_1statements_1_1Statements_a630737d9c1515e366dd8921453a3fb96_icgraph.png" border="0" usemap="#aclasspyfortool_1_1statements_1_1Statements_a630737d9c1515e366dd8921453a3fb96_icgraph" alt=""/></div>
 <map name="aclasspyfortool_1_1statements_1_1Statements_a630737d9c1515e366dd8921453a3fb96_icgraph" id="aclasspyfortool_1_1statements_1_1Statements_a630737d9c1515e366dd8921453a3fb96_icgraph">
-<area shape="rect" title=" " alt="" coords="704,5,996,45"/>
-<area shape="rect" href="classpyfortool_1_1applications_1_1Applications.html#ac7d5540863db1b8cd00555796757538e" title=" " alt="" coords="356,5,656,45"/>
-<area shape="poly" title=" " alt="" coords="691,28,656,28,656,23,691,23"/>
-<area shape="rect" href="classpyfortool_1_1applications_1_1Applications.html#a8dac033a14bfd2c66be258919222fea0" title=" " alt="" coords="5,5,308,45"/>
-<area shape="poly" title=" " alt="" coords="342,28,308,28,308,23,342,23"/>
+<area shape="rect" title=" " alt="" coords="353,5,645,45"/>
+<area shape="rect" href="classpyfortool_1_1applications_1_1Applications.html#ac7d5540863db1b8cd00555796757538e" title=" " alt="" coords="5,5,305,45"/>
+<area shape="poly" title=" " alt="" coords="340,28,305,28,305,23,340,23"/>
 </map>
 </div>
 
@@ -1063,14 +1225,39 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">:param callName: name of the subprogram calls to remove.
-:param simplify: try to simplify code (if we delete "CALL FOO(X)" and if X not
-                 used else where, we also delete it; or if the call was alone inside
-                 a if-then-endif construct, the construct is also removed, and
-                 variables used in the if condition are also checked...)
-:return: number of calls suppressed
+<pre class="fragment">Remove all CALL statements to a specified subprogram.
+
+Parameters
+----------
+callName : str
+    Name of the subprogram to remove calls to.
+simplify : bool, optional
+    If True, also remove variables that become unused after the deletion.
+    For example, if "CALL FOO(X)" is removed and X is not used elsewhere,
+    X will also be removed.
+
+Returns
+-------
+int
+    Number of CALL statements removed.
+
+Examples
+--------
+&gt;&gt;&gt; pft = PYFT('input.F90')
+&gt;&gt;&gt; n = pft.removeCall('FOO')  # Remove all CALL FOO statements
+&gt;&gt;&gt; print(f"Removed {n} calls")
+
+Remove calls and simplify (remove unused variables):
+&gt;&gt;&gt; pft.removeCall('BAR', simplify=True)
+
+Notes
+-----
+- When simplify=True, may cascade to remove:
+  - Empty IF constructs (if call was the only statement)
+  - Variables only used in removed calls
+  - Type declarations that become empty
 </pre> 
-<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l00126">126</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l00179">179</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1220,7 +1407,7 @@ Here is the caller graph for this function:</div>
 
 If a statement is passed, it is suppressed by removeStmtNode
 </pre> 
-<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l01367">1367</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l01596">1596</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1303,24 +1490,26 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpyfortool_1_1statements_1_1Statements_a28647ad85abb3c3a1265cca131c95505_icgraph.png" border="0" usemap="#aclasspyfortool_1_1statements_1_1Statements_a28647ad85abb3c3a1265cca131c95505_icgraph" alt=""/></div>
 <map name="aclasspyfortool_1_1statements_1_1Statements_a28647ad85abb3c3a1265cca131c95505_icgraph" id="aclasspyfortool_1_1statements_1_1Statements_a28647ad85abb3c3a1265cca131c95505_icgraph">
-<area shape="rect" title=" " alt="" coords="1052,69,1344,109"/>
-<area shape="poly" title=" " alt="" coords="1256,58,1236,51,1198,48,1165,50,1145,55,1137,61,1141,68,1136,70,1132,60,1142,50,1164,45,1198,43,1237,45,1258,53"/>
-<area shape="rect" href="classpyfortool_1_1statements_1_1Statements.html#aca8c108f96b084947a9e094e41cd31ad" title=" " alt="" coords="712,69,1004,109"/>
-<area shape="poly" title=" " alt="" coords="1038,101,1004,101,1004,96,1038,96"/>
-<area shape="poly" title=" " alt="" coords="1018,78,1052,78,1052,83,1018,83"/>
-<area shape="poly" title=" " alt="" coords="916,58,896,51,858,48,825,50,805,55,797,61,801,68,796,70,792,60,802,50,824,45,858,43,897,45,918,53"/>
-<area shape="rect" href="classpyfortool_1_1statements_1_1Statements.html#a23c9d25d27cb20d1c1c9fe8340b62aaa" title=" " alt="" coords="370,12,641,52"/>
-<area shape="poly" title=" " alt="" coords="721,70,629,55,629,49,721,64"/>
-<area shape="rect" href="classpyfortool_1_1statements_1_1Statements.html#adcd96515fc5fd7c4133648f1b60947ad" title=" " alt="" coords="347,77,664,102"/>
-<area shape="poly" title=" " alt="" coords="698,92,664,92,664,87,698,87"/>
-<area shape="rect" href="classpyfortool_1_1statements_1_1Statements.html#a2334e692ac3f2696cd63bbee2d1347a2" title=" " alt="" coords="359,127,651,167"/>
-<area shape="poly" title=" " alt="" coords="721,114,629,129,629,124,721,109"/>
-<area shape="rect" href="classpyfortool_1_1applications_1_1Applications.html#a95fe29f92f472ddb9756ed83e695ee5e" title=" " alt="" coords="5,5,299,45"/>
-<area shape="poly" title=" " alt="" coords="408,77,346,67,250,48,251,43,347,61,409,72"/>
-<area shape="rect" href="classpyfortool_1_1applications_1_1Applications.html#af66be3889faa18a7e3a41455e32ec632" title=" " alt="" coords="5,69,299,109"/>
-<area shape="poly" title=" " alt="" coords="333,92,299,92,299,87,333,87"/>
-<area shape="rect" href="classpyfortool_1_1applications_1_1Applications.html#a995c41461dc421a6f3c1dfc9a4c7e595" title=" " alt="" coords="5,133,299,173"/>
-<area shape="poly" title=" " alt="" coords="409,107,347,117,251,136,250,131,346,112,408,102"/>
+<area shape="rect" title=" " alt="" coords="1059,99,1351,139"/>
+<area shape="poly" title=" " alt="" coords="1263,87,1243,80,1205,77,1172,79,1151,84,1144,90,1148,97,1143,99,1139,89,1149,80,1171,74,1205,72,1244,75,1265,82"/>
+<area shape="rect" href="classpyfortool_1_1statements_1_1Statements.html#aca8c108f96b084947a9e094e41cd31ad" title=" " alt="" coords="719,99,1011,139"/>
+<area shape="poly" title=" " alt="" coords="1045,130,1011,130,1011,125,1045,125"/>
+<area shape="poly" title=" " alt="" coords="1025,107,1058,107,1058,112,1025,112"/>
+<area shape="poly" title=" " alt="" coords="923,87,903,80,865,77,832,79,811,84,804,90,808,97,803,99,799,89,809,80,831,74,865,72,904,75,925,82"/>
+<area shape="rect" href="classpyfortool_1_1applications_1_1Applications.html#aead103077b37b734696e4cbc2b7808a7" title=" " alt="" coords="347,5,671,45"/>
+<area shape="poly" title=" " alt="" coords="792,97,670,60,619,48,620,43,671,55,794,92"/>
+<area shape="rect" href="classpyfortool_1_1statements_1_1Statements.html#a23c9d25d27cb20d1c1c9fe8340b62aaa" title=" " alt="" coords="373,69,644,109"/>
+<area shape="poly" title=" " alt="" coords="705,108,644,103,644,98,705,103"/>
+<area shape="rect" href="classpyfortool_1_1statements_1_1Statements.html#adcd96515fc5fd7c4133648f1b60947ad" title=" " alt="" coords="350,134,667,159"/>
+<area shape="poly" title=" " alt="" coords="705,134,668,137,668,132,705,129"/>
+<area shape="rect" href="classpyfortool_1_1statements_1_1Statements.html#a2334e692ac3f2696cd63bbee2d1347a2" title=" " alt="" coords="363,184,655,224"/>
+<area shape="poly" title=" " alt="" coords="781,145,671,173,612,187,611,181,670,168,779,140"/>
+<area shape="rect" href="classpyfortool_1_1applications_1_1Applications.html#a95fe29f92f472ddb9756ed83e695ee5e" title=" " alt="" coords="5,63,299,103"/>
+<area shape="poly" title=" " alt="" coords="409,134,346,124,249,105,250,100,347,119,410,129"/>
+<area shape="rect" href="classpyfortool_1_1applications_1_1Applications.html#af66be3889faa18a7e3a41455e32ec632" title=" " alt="" coords="5,127,299,167"/>
+<area shape="poly" title=" " alt="" coords="336,149,299,149,299,144,336,144"/>
+<area shape="rect" href="classpyfortool_1_1applications_1_1Applications.html#a995c41461dc421a6f3c1dfc9a4c7e595" title=" " alt="" coords="5,191,299,231"/>
+<area shape="poly" title=" " alt="" coords="410,164,347,175,250,193,249,188,346,169,409,159"/>
 </map>
 </div>
 
@@ -1360,7 +1549,7 @@ Here is the caller graph for this function:</div>
 <pre class="fragment">:param item: item to remove from list
 :param itemPar: the parent of item (the list)
 </pre> 
-<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l01542">1542</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l01771">1771</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1430,13 +1619,26 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Removes all print statements
-:param simplify: try to simplify code (if we delete "print*, X" and if X is not
-                 used else where, we also delete it; or if the print was alone inside
-                 a if-then-endif construct, the construct is also removed, and
-                 variables used in the if condition are also checked...)
+<pre class="fragment">Remove all PRINT statements from the code.
+
+Parameters
+----------
+simplify : bool, optional
+    If True, also remove variables that become unused after the deletion.
+
+Examples
+--------
+&gt;&gt;&gt; pft = PYFT('input.F90')
+&gt;&gt;&gt; pft.removePrints()  # Remove all PRINT statements
+&gt;&gt;&gt; pft.removePrints(simplify=True)  # Also remove unused variables
+
+Notes
+-----
+- When simplify=True, may cascade to remove:
+  - Empty IF constructs (if print was the only statement)
+  - Variables only used in removed prints
 </pre> 
-<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l00142">142</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l00220">220</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1557,20 +1759,37 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">This function removes a statement node and:
-  - suppress variable that became useless (if simplifyVar is True)
-  - suppress outer loop/if if useless (if simplifyStruct is True)
-:param nodes: node (or list of nodes) to remove
-:param simplifyVar: try to simplify code (if we delete "CALL FOO(X)" and if X not used
-                    else where, we also delete it; or if the call was alone inside a
-                    if-then-endif construct, with simplifyStruct=True, the construct is also
-                    removed, and variables used in the if condition are also checked...)
-:param simplifyStruct: try to simplify code (if we delete "CALL FOO(X)" and if the call was
-                       alone inside a if-then-endif construct, the construct is also
-                       removed and variables used in the if condition
-                       (with simplifyVar=True) are also checked...)
+<pre class="fragment">Remove statement nodes with optional code simplification.
+
+Parameters
+----------
+nodes : xml element or list of xml elements
+    Node(s) to remove from the code tree.
+simplifyVar : bool
+    If True, also remove variables that become unused after
+    the deletion of the nodes.
+simplifyStruct : bool
+    If True, also remove empty enclosing constructs
+    (IF blocks, loops) that become empty after node removal.
+
+Examples
+--------
+&gt;&gt;&gt; pft = PYFT('input.F90')
+&gt;&gt;&gt; nodes = pft.findall('.//{*}call-stmt')
+&gt;&gt;&gt; pft.removeStmtNode(nodes, simplifyVar=True, simplifyStruct=True)
+
+Notes
+-----
+- Handles nested structures (removes inner statements first).
+- When simplifyStruct=True:
+  - Empty IF blocks are removed
+  - Empty loops are removed
+  - WHERE constructs are handled
+- When simplifyVar=True:
+  - Unused local variables are removed
+  - Empty type declarations are cleaned up
 </pre> 
-<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l01235">1235</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l01447">1447</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1653,24 +1872,26 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classpyfortool_1_1statements_1_1Statements_aca8c108f96b084947a9e094e41cd31ad_icgraph.png" border="0" usemap="#aclasspyfortool_1_1statements_1_1Statements_aca8c108f96b084947a9e094e41cd31ad_icgraph" alt=""/></div>
 <map name="aclasspyfortool_1_1statements_1_1Statements_aca8c108f96b084947a9e094e41cd31ad_icgraph" id="aclasspyfortool_1_1statements_1_1Statements_aca8c108f96b084947a9e094e41cd31ad_icgraph">
-<area shape="rect" title=" " alt="" coords="712,151,1004,191"/>
-<area shape="poly" title=" " alt="" coords="919,139,897,132,858,129,824,131,802,136,795,142,799,149,794,151,790,141,800,132,823,126,858,124,898,127,920,134"/>
-<area shape="rect" href="classpyfortool_1_1statements_1_1Statements.html#a23c9d25d27cb20d1c1c9fe8340b62aaa" title=" " alt="" coords="370,12,641,52"/>
-<area shape="poly" title=" " alt="" coords="814,145,745,104,663,66,625,55,626,50,665,62,747,100,817,140"/>
-<area shape="rect" href="classpyfortool_1_1statements_1_1Statements.html#adcd96515fc5fd7c4133648f1b60947ad" title=" " alt="" coords="347,77,664,102"/>
-<area shape="poly" title=" " alt="" coords="781,149,663,117,597,105,598,99,665,112,782,144"/>
-<area shape="rect" href="classpyfortool_1_1statements_1_1Statements.html#a28647ad85abb3c3a1265cca131c95505" title=" " alt="" coords="359,151,651,191"/>
-<area shape="poly" title=" " alt="" coords="698,182,651,182,651,177,698,177"/>
-<area shape="rect" href="classpyfortool_1_1statements_1_1Statements.html#a2334e692ac3f2696cd63bbee2d1347a2" title=" " alt="" coords="359,215,651,255"/>
-<area shape="poly" title=" " alt="" coords="734,196,617,217,616,212,733,191"/>
-<area shape="rect" href="classpyfortool_1_1applications_1_1Applications.html#a95fe29f92f472ddb9756ed83e695ee5e" title=" " alt="" coords="5,5,299,45"/>
-<area shape="poly" title=" " alt="" coords="408,77,346,67,250,48,251,43,347,61,409,72"/>
-<area shape="rect" href="classpyfortool_1_1applications_1_1Applications.html#af66be3889faa18a7e3a41455e32ec632" title=" " alt="" coords="5,69,299,109"/>
-<area shape="poly" title=" " alt="" coords="333,92,299,92,299,87,333,87"/>
-<area shape="rect" href="classpyfortool_1_1applications_1_1Applications.html#a995c41461dc421a6f3c1dfc9a4c7e595" title=" " alt="" coords="5,133,299,173"/>
-<area shape="poly" title=" " alt="" coords="409,107,347,117,251,136,250,131,346,112,408,102"/>
-<area shape="poly" title=" " alt="" coords="665,159,712,159,712,164,665,164"/>
-<area shape="poly" title=" " alt="" coords="566,139,545,132,505,129,471,131,450,136,442,142,446,149,441,151,437,141,447,132,470,126,505,124,546,127,568,134"/>
+<area shape="rect" title=" " alt="" coords="719,168,1011,208"/>
+<area shape="poly" title=" " alt="" coords="926,156,904,149,865,147,830,149,809,154,801,159,805,167,800,169,796,158,806,149,829,143,865,141,905,144,928,151"/>
+<area shape="rect" href="classpyfortool_1_1applications_1_1Applications.html#aead103077b37b734696e4cbc2b7808a7" title=" " alt="" coords="347,5,671,45"/>
+<area shape="poly" title=" " alt="" coords="828,161,758,109,715,82,670,60,635,48,637,43,672,55,717,77,761,104,831,157"/>
+<area shape="rect" href="classpyfortool_1_1statements_1_1Statements.html#a23c9d25d27cb20d1c1c9fe8340b62aaa" title=" " alt="" coords="373,69,644,109"/>
+<area shape="poly" title=" " alt="" coords="798,166,670,124,620,112,622,107,671,119,800,161"/>
+<area shape="rect" href="classpyfortool_1_1statements_1_1Statements.html#adcd96515fc5fd7c4133648f1b60947ad" title=" " alt="" coords="350,134,667,159"/>
+<area shape="poly" title=" " alt="" coords="705,172,618,162,619,157,706,167"/>
+<area shape="rect" href="classpyfortool_1_1statements_1_1Statements.html#a28647ad85abb3c3a1265cca131c95505" title=" " alt="" coords="363,208,655,248"/>
+<area shape="poly" title=" " alt="" coords="747,212,655,223,655,218,746,207"/>
+<area shape="rect" href="classpyfortool_1_1statements_1_1Statements.html#a2334e692ac3f2696cd63bbee2d1347a2" title=" " alt="" coords="363,272,655,312"/>
+<area shape="poly" title=" " alt="" coords="804,216,741,240,671,263,623,275,622,269,670,257,739,235,802,211"/>
+<area shape="rect" href="classpyfortool_1_1applications_1_1Applications.html#a95fe29f92f472ddb9756ed83e695ee5e" title=" " alt="" coords="5,63,299,103"/>
+<area shape="poly" title=" " alt="" coords="409,134,346,124,249,105,250,100,347,119,410,129"/>
+<area shape="rect" href="classpyfortool_1_1applications_1_1Applications.html#af66be3889faa18a7e3a41455e32ec632" title=" " alt="" coords="5,127,299,167"/>
+<area shape="poly" title=" " alt="" coords="336,149,299,149,299,144,336,144"/>
+<area shape="rect" href="classpyfortool_1_1applications_1_1Applications.html#a995c41461dc421a6f3c1dfc9a4c7e595" title=" " alt="" coords="5,191,299,231"/>
+<area shape="poly" title=" " alt="" coords="410,164,347,175,250,193,249,188,346,169,409,159"/>
+<area shape="poly" title=" " alt="" coords="627,204,718,193,719,198,628,209"/>
+<area shape="poly" title=" " alt="" coords="570,196,548,189,509,187,474,189,453,194,445,199,449,207,444,209,440,198,450,189,473,183,509,181,549,184,572,191"/>
 </map>
 </div>
 
@@ -1707,13 +1928,42 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Set to .FALSE. a given boolean fortran flag before removing the node if simplify is True
-:param flags: list of strings of flags to set to .FALSE.
-:param simplify: try to simplify code (if the .FALSE. was alone inside a if-then-endif
-                 construct, the construct is removed, and variables used in the if
-                 condition are also checked)
+<pre class="fragment">Set conditional flags to .FALSE. in IF conditions.
+
+Replaces specified flag variables in IF conditions with .FALSE.,
+effectively disabling code paths controlled by those flags.
+
+Parameters
+----------
+flags : str or list of str
+    Flag variable name(s) to set to .FALSE.
+    Can be a single string or a list of strings.
+simplify : bool, optional
+    If True, remove resulting dead code:
+    - IF blocks that always evaluate to .FALSE. are removed
+    - Unused variables are cleaned up. Default is False.
+
+Examples
+--------
+&gt;&gt;&gt; pft = PYFT('input.F90')
+&gt;&gt;&gt; pft.setFalseIfStmt('LFLAG')  # IF (LFLAG) -&gt; .FALSE.
+&gt;&gt;&gt; pft.setFalseIfStmt(['LFLAG1', 'LFLAG2'], simplify=True)
+
+Before:
+    IF (LDEBUG) THEN
+        PRINT*, "Debug info"
+    END IF
+
+After (LDEBUG set to .FALSE.):
+    ! Block removed when simplify=True
+
+Notes
+-----
+- Multiple flags in a single condition (e.g., LFLAG1 .AND. LFLAG2)
+  result in removal of the entire condition.
+- Works on both IF statements and IF constructs.
 </pre> 
-<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l01108">1108</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="statements_8py_source.html#l01272">1272</a> of file <a class="el" href="statements_8py_source.html">statements.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
